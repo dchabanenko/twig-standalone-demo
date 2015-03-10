@@ -1,0 +1,19 @@
+{% block dream %}
+    afterDreamParent
+{% endblock dream %}
+
+{% block content %}
+    <section class="listings">
+        <div class="wrapper">
+            <ul class="properties_list">
+                {% for room in rooms %}
+                    {% include "room.html.twig" %}
+                {% endfor %}
+            </ul>
+            <div class="more_listing">
+                <a href="#" class="more_listing_btn">View More Listings</a>
+            </div>
+        </div>
+    </section>	<!--  end listing section  -->
+
+{% endblock content %}
